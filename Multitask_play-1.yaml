@@ -1,18 +1,19 @@
 - name: variable from the prompt
   hosts: all
   become: yes
-  vars_prompt:
-    - name: USERNAME
-      prompt: enter the username
-      private: false
-    - name: PASSWORD
-      prompt: enter the password
-      private: true
+  # vars_prompt:
+    # - name: USERNAME
+    #   prompt: enter the username
+    #   private: false
+    # - name: PASSWORD
+    #   prompt: enter the password
+    #   private: true
     #  name: Jakeer
     #  course: AWS 
     #  duration: 120hrs
   tasks:
   - name: devops course
     debug:
-      msg: "my username is {{USERNAME}}, and my password is {{PASSWORD}}"
+      # msg: "my username is {{USERNAME}}, and my password is {{PASSWORD}}"
+      msg: "Hi, We are learning {{course}} from Trainer {{trainer}}, Duration is {{duration}}."
  
