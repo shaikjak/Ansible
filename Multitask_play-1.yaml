@@ -6,7 +6,11 @@
     course: AWS 
     duration: 120hrs
   tasks:
-  - name: priting the variables
+  - name: it will override the changes
+    course: Devops
+    debug:
+      msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
+  - name: devops course
     debug:
       msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
  
