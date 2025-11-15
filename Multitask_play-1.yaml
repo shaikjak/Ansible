@@ -1,10 +1,11 @@
-- name: variable it will store the value
+- name: variable from the files
   hosts: all
   become: yes
-  vars:
-    name: Jakeer
-    course: AWS 
-    duration: 120hrs
+  vars_files:
+    - vars.yaml
+    #  name: Jakeer
+    #  course: AWS 
+    #  duration: 120hrs
   tasks:
   - name: it will override the changes
     vars:
