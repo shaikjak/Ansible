@@ -1,4 +1,3 @@
-vars:
-    name: Jakeer
-    course: AWS 
-    duration: 120hrs
+name: Jakeer
+course: AWS
+duration: 120hrs
