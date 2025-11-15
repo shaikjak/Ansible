@@ -15,5 +15,5 @@
   - name: devops course
     debug:
       # msg: "my username is {{USERNAME}}, and my password is {{PASSWORD}}"
-      msg: "Hi, We are learning {{course}} from Trainer {{trainer}}, Duration is {{duration}}."
+      msg: "Hi, We are learning {{course}} from Trainer {{name}}, Duration is {{duration}}."
  
