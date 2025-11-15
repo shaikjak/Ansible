@@ -12,10 +12,7 @@
     #  course: AWS 
     #  duration: 120hrs
   tasks:
-  - name: it will override the changes
-    debug:
-      msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
   - name: devops course
     debug:
-      msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
+      msg: "my username is {{USERNAME}}, and my password is {{PASSWORD}}"
  
