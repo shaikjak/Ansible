@@ -4,18 +4,19 @@
   tasks:
     - name: Play-1
       debug:
-      msg: "Hello I am from PLAY-1 and TASK-1"
+        msg: "Hello I am from PLAY-1 and TASK-1"
 
 - name: Multitask play-2
   hosts: all
   become: yes
   tasks:
-      - name: installing httpd
-        dnf:
-        -name: httpd
+    - name: Installing httpd
+      dnf:
+        name: httpd
         state: present
-      - name: installing httpd service
-        service:
-        -name: httpd
+
+    - name: Starting httpd service
+      service:
+        name: httpd
         state: started
         enabled: yes
