@@ -1,0 +1,22 @@
+- name: Running from PLAYBOOK 1
+  hosts: all
+  become: yes
+  tasks:
+    - name: printing the message
+      debug:
+        msg: "Hello I am from Anantapur"
+
+- name: Running from PLAYBOOK 2
+  hosts: all
+  become: yes
+  tasks:
+    - name: installing HTTPD
+      dnf:
+        name: httpd
+        state: present
+
+    - name: enabling the httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
