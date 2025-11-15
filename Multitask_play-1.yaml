@@ -1,8 +1,13 @@
-- name: variable from the files
+- name: variable from the prompt
   hosts: all
   become: yes
-  vars_files:
-    - vars.yaml
+  vars_prompt:
+    - name: USERNAME
+      prompt: enter the username
+      private: false
+    - name: PASSWORD
+      prompt: enter the password
+      private: true
     #  name: Jakeer
     #  course: AWS 
     #  duration: 120hrs
