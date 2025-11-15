@@ -8,8 +8,6 @@
     #  duration: 120hrs
   tasks:
   - name: it will override the changes
-    vars:
-      course: Devops
     debug:
       msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
   - name: devops course
