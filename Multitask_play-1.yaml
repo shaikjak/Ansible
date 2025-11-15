@@ -1,22 +1,12 @@
-- name: Multitask play-1
+- name: variable it will store the value
   hosts: all
   become: yes
+  vars:
+    name: Jakeer
+    course: AWS 
+    duration: 120hrs
   tasks:
-    - name: Play-1
-      debug:
-        msg: "Hello I am from PLAY-1 and TASK-1"
-
-- name: Multitask play-2
-  hosts: all
-  become: yes
-  tasks:
-    - name: Installing httpd
-      dnf:
-        name: httpd
-        state: present
-
-    - name: Starting httpd service
-      service:
-        name: httpd
-        state: started
-        enabled: yes
+  - name: priting the variables
+    debug:
+      msg: "hello i am {{name}}, and i am learning {{course}} duriation is {{duration}}"
+ 
