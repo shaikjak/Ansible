@@ -1,23 +1,24 @@
-- name: data types
+- name: conditions
   hosts: all
   become: yes
-  vars:
-    username: jakeer
-    course: AWS Devops
-    duration: 120hrs
-
-    tools:
-      - AWS
-      - sonarqube
-      - nexus
-    experience:
-        Devops: 3
-        AWS: 3
-    Realproject: true
   tasks:
-    - name: print the data types 
+    - name: get the user information
+      command: id expense
+      register: USER
+      ignore_errors: true
+     
+    - name: get the user details
       debug:
-        msg: "hellow i am {{username}}, I have {{experience.Devops}} experience and tools I used {{tools}}"
+        msg: "print the user details {{USER}}"
 
+    - name: check if user is there or not
+      command: useradd expense
+      when: USER.rc != 0
+
+    - name: say Hello
+      debug:
+        msg: "Hello"
+ 
+ 
 
  
