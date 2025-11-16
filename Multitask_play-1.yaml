@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   vars:
-    name: jakeer
+    username: jakeer
     course: AWS Devops
     duration: 120hrs
 
@@ -17,7 +17,7 @@
   tasks:
     - name: print the data types 
       debug:
-        msg: "hellow i am {{name}}, I have {{Devops}} experience and tools I useed {{tools}}"
+        msg: "hellow i am {{username}}, I have {{experience.Devops}} experience and tools I used {{tools}}"
 
 
  
