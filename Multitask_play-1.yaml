@@ -1,19 +1,23 @@
-- name: variable from the prompt
+- name: data types
   hosts: all
   become: yes
-  # vars_prompt:
-    # - name: USERNAME
-    #   prompt: enter the username
-    #   private: false
-    # - name: PASSWORD
-    #   prompt: enter the password
-    #   private: true
-    #  name: Jakeer
-    #  course: AWS 
-    #  duration: 120hrs
+  vars:
+    name: jakeer
+    course: AWS Devops
+    duration: 120hrs
+
+    tools:
+      - AWS
+      - sonarqube
+      - nexus
+    experience:
+        Devops: 3
+        AWS: 3
+    Realproject: true
   tasks:
-  - name: devops course
-    debug:
-      # msg: "my username is {{USERNAME}}, and my password is {{PASSWORD}}"
-      msg: "Hi, We are learning {{course}} from Trainer {{name}}, Duration is {{duration}}."
+    - name: print the data types 
+      debug:
+        msg: "hellow i am {{name}}, I have {{Devops}} experience and tools I useed {{tools}}"
+
+
  
