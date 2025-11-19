@@ -1,6 +1,8 @@
 - name: default value
   hosts: all
   become: yes
+  vars:
+    msg: "hellow JAKEER i am learning course"
   tasks:
     - name: the defult value is below
       debug: 
