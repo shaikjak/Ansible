@@ -4,4 +4,4 @@
   tasks:
     - name: the defult value is below
       debug: 
-        msg: the defult value is {{ course | defult('ansible') }}
+        msg: the defult value is {{ course | default('ansible') }}
