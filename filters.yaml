@@ -7,7 +7,7 @@
       dnf:
        name: "{{ item }}"
        state: latest
-       loop:
+      loop:
        - sql 
        - nginx
 
