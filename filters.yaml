@@ -8,7 +8,7 @@
        name: "{{ item }}"
        state: latest
       loop:
-       - mysql 
+       - docker
        - nginx
 
    
