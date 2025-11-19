@@ -3,6 +3,7 @@
   become: yes
   vars:
     msg: "hellow JAKEER i am learning course"
+    course: "devops"
   tasks:
     - name: the defult value is below
       debug: 
