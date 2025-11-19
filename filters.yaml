@@ -1,14 +1,10 @@
-- name: install the packages
-  hosts: all
-  become: yes
-
+- name: demo on loops
+  hosts: localhost
   tasks:
-    - name: git and nginx
-      dnf:
-       name: "{{ item }}"
-       state: latest
-      loop:
-       - docker
-       - nginx
-
-   
+  - name: print names
+    ansible.builtin.debug:
+      msg: "Hello {{item}} "
+    loop:
+    - linux
+    - shell
+    - ansible
