@@ -1,15 +1,14 @@
-- name: default value
+- name: install the packages
   hosts: all
   become: yes
-  vars:
-   my_dict:
-      - {'key': 'Course', 'value': 'Ansbile'}
-      - {'key': 'Trainer', 'value': 'Sivakumar'}
-      - {'key': 'Duration', 'value': '120hr'}
+
   tasks:
-    - name: before dict
-      debug: 
-        msg: "the before brdict is {{ my_dict }}"
-    - name: after dict
-      debug: 
-        msg: "the after dict value is {{ my_dict | items2dict }}"    
+    - name: git and nginx
+      dnf:
+       name: "{{ item }}"
+       state: latest
+       loop:
+       - sql 
+       - nginx
+
+   
