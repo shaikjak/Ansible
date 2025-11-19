@@ -10,4 +10,4 @@
 
     - name: max value 
       debug: 
-        msg: "the max value is {{ course | max }}"
+        msg: "the max value is {{ number | max }}"
