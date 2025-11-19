@@ -2,13 +2,12 @@
   hosts: all
   become: yes
   vars:
-    msg: "hellow JAKEER i am learning course"
-    course: "devops"
+    number: [25, 35, 45, 55, 65, 75]
   tasks:
-    - name: lower case
+    - name: min value
       debug: 
-        msg: "the defult value is {{ 'JAKEER' | lower }}"
+        msg: "the min value is {{ number | min }}"
 
-    - name: upper case
+    - name: max value 
       debug: 
-        msg: "the defult value is {{ course | upper }}"
+        msg: "the max value is {{ course | max }}"
