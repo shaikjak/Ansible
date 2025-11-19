@@ -3,8 +3,8 @@
   become: yes
   vars_prompt:
   - name: number
-  prompt: enter the number
-  private: no
+    prompt: enter the number
+    private: no
   tasks:
 - name: check if the number is below 10
   debug:
