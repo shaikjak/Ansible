@@ -2,12 +2,8 @@
   hosts: all
   become: yes
   vars:
-    number: [25, 35, 45, 55, 65, 75]
+    number: [1, 2, 2, 2, 4, 4]
   tasks:
     - name: min value
       debug: 
-        msg: "the min value is {{ number | min }}"
-
-    - name: max value 
-      debug: 
-        msg: "the max value is {{ number | max }}"
+        msg: "the duplicate value is {{ number | unique }}"
