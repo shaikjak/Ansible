@@ -8,11 +8,11 @@
   tasks:
 - name: check if the number is below 10
   debug:
-  msg: "the given below {{number}} is below 10"
+    msg: "the given below {{number}} is below 10"
   when: number | int <= 10
 - name: check if the number is above 10
   debug:
-  msg: "the given below {{number}} is above 10"
+    msg: "the given below {{number}} is above 10"
   when: number | int > 10
 
 
