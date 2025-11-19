@@ -5,9 +5,6 @@
     msg: "hellow JAKEER i am learning course"
     course: "devops"
   tasks:
-    - name: the defult value is below
-      debug: 
-        msg: the defult value is {{ course | default('ansible') }}
     - name: lower case
       debug: 
         msg: the defult value is {{ JAKEER | lower }}
