@@ -7,8 +7,8 @@
   tasks:
     - name: lower case
       debug: 
-        msg: the defult value is {{ JAKEER | lower }}
+        msg: "the defult value is {{ JAKEER | lower }}"
 
     - name: upper case
       debug: 
-        msg: the defult value is {{ course | upper }}
+        msg: "the defult value is {{ course | upper }}"
