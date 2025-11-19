@@ -1,11 +1,11 @@
 - name: default value
   hosts: all
   become: yes
-  my_dict:
   vars:
-   course: Terraform
-   triner: Jakeer
-   duration: 120 hours
+   my_dict:
+    course: Terraform
+    triner: Jakeer
+    duration: 120 hours
   tasks:
     - name: before dict
       debug: 
