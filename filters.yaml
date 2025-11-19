@@ -1,10 +1,10 @@
-name: data manuplation
-hosts: all
-become: yes
-vars_prompt:
-prompt: enter the number
-private: no
-tasks:
+- name: data manuplation
+  hosts: all
+  become: yes
+  vars_prompt:
+  prompt: enter the number
+  private: no
+  tasks:
 - name: check if the number is below 10
   debug:
   msg: "the given below {{number}} is below 10"
