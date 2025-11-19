@@ -5,3 +5,10 @@
     - name: the defult value is below
       debug: 
         msg: the defult value is {{ course | default('ansible') }}
+    - name: lower case
+      debug: 
+        msg: the defult value is {{ JAKEER | lower }}
+
+    - name: upper case
+      debug: 
+        msg: the defult value is {{ course | upper }}
