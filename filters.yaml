@@ -1,9 +1,14 @@
 - name: default value
   hosts: all
   become: yes
-  vars:
-    number: [1, 2, 2, 2, 4, 4]
+  my_dict:
+   course: Terraform
+   triner: Jakeer
+   duration: 120 hours
   tasks:
-    - name: min value
+    - name: before dict
       debug: 
-        msg: "the duplicate value is {{ number | unique }}"
+        msg: "the before brdict is {{ my_dict }}"
+    - name: after dict
+      debug: 
+        msg: "the after dict value is {{ my_dict | dict2iteams }}"    
