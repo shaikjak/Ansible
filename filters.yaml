@@ -1,19 +1,7 @@
-- name: data manuplation
+- name: default value
   hosts: all
   become: yes
-  vars_prompt:
-  - name: number
-    prompt: enter the number
-    private: no
   tasks:
-    - name: check if the number is below 10
-      debug:
-        msg: "the given below {{number}} is below 10"
-      when: number | int <= 10
-    - name: check if the number is above 10
-      debug:
-        msg: "the given below {{number}} is above 10"
-      when: number | int > 10
-
-
-
+    -name: the defult value is below
+    debug: 
+      msg: the defult value is {{ course | defult('ansible') }}
