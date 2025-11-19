@@ -12,4 +12,4 @@
         msg: "the before brdict is {{ my_dict }}"
     - name: after dict
       debug: 
-        msg: "the after dict value is {{ my_dict | dict2iteams }}"    
+        msg: "the after dict value is {{ my_dict | dict2items }}"    
